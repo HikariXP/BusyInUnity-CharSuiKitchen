@@ -10,29 +10,29 @@
  * Start our rest time.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
-using UnityEngine;
 
 namespace CharSuiKitchen
 {
-	public static class MainChef
+	public class MainChef
 	{
-		private static Dictionary<string, BaseChef> chefs = new Dictionary<string, BaseChef>()
-		{
-			{"AssetBuildChef", new AssetBuildChef()}
-		};
-
+		// public List<BaseChef>
+		//
 		[MenuItem("Help/Take a Break...")]
-		public static void StartBuildAsset()
+		public void StartBuildAsset()
 		{
-			chefs["AssetBuildChef"].Cook(null);
+			new AssetBuildChef().Cook(null);
 		}
 		
-		public static void StartBuildAPK()
-		{
-			
-		}
+		// private static Dictionary<string, BaseChef> chefs = new Dictionary<string, BaseChef>()
+		// {
+		// 	{"AssetBuildChef", new AssetBuildChef()}
+		// };
+		//
+		// [MenuItem("Help/Take a Break...")]
+		// public static void StartBuildAsset()
+		// {
+		// 	chefs["AssetBuildChef"].Cook(null);
+		// }
 	}
 }

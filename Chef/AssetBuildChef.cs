@@ -7,7 +7,6 @@
 
 using System;
 using UnityEngine;
-using Random = System.Random;
 
 namespace CharSuiKitchen
 {
@@ -51,7 +50,7 @@ namespace CharSuiKitchen
 			var filesCount = files.Length;
 			for (int i = 0; i < filesCount; i++)
 			{
-				var time = UnityEngine.Random.Range(100, 10000);
+				var time = UnityEngine.Random.Range(100, 1000); // 0.1f ~ 1f
 				var progress = UnityEngine.Random.Range(0f, 0.5f);
 				Cooker.ShowProgressBar("Importing",files[i],progress);
 				Cooker.ThreadFreeze(time);
@@ -63,7 +62,7 @@ namespace CharSuiKitchen
 			
 			for (int i = 0; i < filesCount; i++)
 			{
-				var time = UnityEngine.Random.Range(100, 10000);
+				var time = UnityEngine.Random.Range(100, 1000); // 0.1f ~ 1f
 				var progress = UnityEngine.Random.Range(0f, 0.5f);
 				Cooker.ShowProgressBar("Calculate Scene Dependency Datas",files[i],progress);
 				Cooker.ThreadFreeze(time);
