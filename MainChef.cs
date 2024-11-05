@@ -19,7 +19,7 @@ namespace CharSuiKitchen
 		// public List<BaseChef>
 		//
 		[MenuItem("Help/Take a Break...")]
-		public void StartBuildAsset()
+		public static void StartBuildAsset()
 		{
 			new AssetBuildChef().Cook(null);
 		}
